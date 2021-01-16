@@ -8,7 +8,7 @@ import imutils
 import os
 import time
 from cv2 import cv2
-
+import pafy 
 
 def decode_predictions(scores, geometry, min_confidence):
     # grab the number of rows and columns from the scores volume, then
@@ -79,7 +79,7 @@ def decode_predictions(scores, geometry, min_confidence):
     return (rects, confidences)
 
 
-def text_detection(vid_ref, east, min_confidence, width, height):
+def text_detection(vid_ref,east="frozen_east_text_detection.pb", min_confidence=0.5, width=320, height=320,max_percent=10.0,min_percent=1.0,warmup=200):
     # initialize the original frame dimensions, new frame dimensions,
     # and ratio between the dimensions
     (W, H) = (None, None)
@@ -109,10 +109,15 @@ def text_detection(vid_ref, east, min_confidence, width, height):
     # start the FPS throughput estimator
     fps = FPS().start()
 
+    # Define path for saving cropped images.
+    path = 'C:/Users/Vishal Ramane/Documents/GitHub/MTProject/textDetection/Img_cropped'
+    frameNo =0   
+    
     # loop over frames from the video stream
     while True:
         # grab the current frame, then handle if we are using a
         # VideoStream or VideoCapture object- returns (ret,rame)
+        
         frame = vs.read()
         frame = frame[1] if vid_ref else frame
         #  VideoCapture object- returns (ret,frame)
@@ -133,6 +138,7 @@ def text_detection(vid_ref, east, min_confidence, width, height):
             rW = W / float(newW)
             rH = H / float(newH)
 
+
         # resize the frame, this time ignoring aspect ratio
         frame = cv2.resize(frame, (newW, newH))
 
@@ -151,15 +157,26 @@ def text_detection(vid_ref, east, min_confidence, width, height):
         boxes = non_max_suppression(np.array(rects), probs=confidences)
 
         # loop over the bounding boxes
+        textNo = 0        
+
         for (startX, startY, endX, endY) in boxes:
+            textNo += 1
             # scale the bounding box coordinates based on the respective
             # ratios
             startX = int(startX * rW)
             startY = int(startY * rH)
             endX = int(endX * rW)
             endY = int(endY * rH)
+
             # draw the bounding box on the frame
             cv2.rectangle(orig, (startX, startY), (endX, endY), (0, 255, 0), 2)
+
+            # Crooping bounding boxes.
+            cropped_img = orig[startY:endY, startX:endX]
+
+            if(cropped_img.size !=0):
+                # saving cropped images.
+                cv2.imwrite(os.path.join(path ,f'f{frameNo}_{textNo}.png'), cropped_img)
 
         # update the FPS counter
         fps.update()
@@ -204,4 +221,17 @@ def text_detection_command():
 
 
 if __name__ == '__main__':
-    text_detection_command()
+    #text_detection_command()
+
+    # url of the video 
+    # url = "https://www.youtube.com/watch?v=SkcddD0LGlM"  
+    url = "https://www.youtube.com/watch?v=AsDfluoYB4Q"  
+    # creating pafy object of the video 
+    video = pafy.new(url)  
+    # getting best stream 
+    best = video.getbest() 
+    # best.download()       
+    
+    text_detection(vid_ref=best.url )
+    # folderpath ='C:/Users/Vishal Ramane/Documents/GitHub/MTProject/videos/'    
+    # text_detection(vid_ref=os.path.join(folderpath ,'The Female Reproductive System.mp4') )
