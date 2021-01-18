@@ -78,8 +78,31 @@ def decode_predictions(scores, geometry, min_confidence):
     # return a tuple of the bounding boxes and associated confidences
     return (rects, confidences)
 
+def imgPreprocess(folderPath):
+    imageNo = 0 
+    for filename in os.listdir(folderPath):
+        # read
+        img = cv2.imread(os.path.join(folderPath,filename), cv2.IMREAD_GRAYSCALE)
+        
+        # increase contrast
+        pxmin = np.min(img)
+        pxmax = np.max(img)
+        imgContrast = (img - pxmin) / (pxmax - pxmin) * 255
 
-def text_detection(vid_ref,east="frozen_east_text_detection.pb", min_confidence=0.5, width=320, height=320,max_percent=10.0,min_percent=1.0,warmup=200):
+        # increase line width
+        kernel = np.ones((3, 3), np.uint8)
+        imgMorph = cv2.erode(imgContrast, kernel, iterations    = 1)       
+    
+        # saving cropped images.
+        cv2.imwrite(os.path.join(folderPath ,f'f_{imageNo}.png'), imgMorph)
+        imageNo +=1
+        
+
+    print("[INFO] Preprocessing done on cropped images.")
+
+
+        
+def text_detection(vid_ref,folderPath,east="frozen_east_text_detection.pb", min_confidence=0.5, width=320, height=320,max_percent=10.0,min_percent=1.0,warmup=200):
     # initialize the original frame dimensions, new frame dimensions,
     # and ratio between the dimensions
     (W, H) = (None, None)
@@ -108,11 +131,9 @@ def text_detection(vid_ref,east="frozen_east_text_detection.pb", min_confidence=
         vs = cv2.VideoCapture(vid_ref)
     # start the FPS throughput estimator
     fps = FPS().start()
-
-    # Define path for saving cropped images.
-    path = 'C:/Users/Vishal Ramane/Documents/GitHub/MTProject/textDetection/Img_cropped'
+   
     frameNo =0   
-    
+  
     # loop over frames from the video stream
     while True:
         # grab the current frame, then handle if we are using a
@@ -176,7 +197,7 @@ def text_detection(vid_ref,east="frozen_east_text_detection.pb", min_confidence=
 
             if(cropped_img.size !=0):
                 # saving cropped images.
-                cv2.imwrite(os.path.join(path ,f'f{frameNo}_{textNo}.png'), cropped_img)
+                cv2.imwrite(os.path.join(folderPath ,f'f{frameNo}_{textNo}.png'), cropped_img)
 
         # update the FPS counter
         fps.update()
@@ -224,14 +245,16 @@ if __name__ == '__main__':
     #text_detection_command()
 
     # url of the video 
-    # url = "https://www.youtube.com/watch?v=SkcddD0LGlM"  
-    url = "https://www.youtube.com/watch?v=AsDfluoYB4Q"  
+    url = "https://www.youtube.com/watch?v=SkcddD0LGlM"  
+    # url = "https://www.youtube.com/watch?v=AsDfluoYB4Q"  
     # creating pafy object of the video 
     video = pafy.new(url)  
     # getting best stream 
     best = video.getbest() 
     # best.download()       
     
-    text_detection(vid_ref=best.url )
+    folderPath = 'C:/Users/Vishal Ramane/Documents/GitHub/MTProject/textDetection/Img_cropped';
+    text_detection(best.url,folderPath)
     # folderpath ='C:/Users/Vishal Ramane/Documents/GitHub/MTProject/videos/'    
-    # text_detection(vid_ref=os.path.join(folderpath ,'The Female Reproductive System.mp4') )
+    # text_detection(vid_ref=os.path.join(folderpath ,'The Female Reproductive System.mp4') )   
+    imgPreprocess(folderPath)
