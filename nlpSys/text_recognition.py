@@ -126,12 +126,12 @@ if __name__ == '__main__':
      # url of the video 
     
     # Female Reproductive sys
-    # url = "https://www.youtube.com/watch?v=SkcddD0LGlM"  
+    url = "https://www.youtube.com/watch?v=SkcddD0LGlM"  
     # url = "https://www.youtube.com/watch?v=L-cXrt8RWek"  
     
     # Access Math
     # url = "https://www.youtube.com/watch?v=AsDfluoYB4Q"  
-    url = "https://www.youtube.com/watch?v=7D8-R-4Cdfg&t=237s"  
+    # url = "https://www.youtube.com/watch?v=7D8-R-4Cdfg&t=237s"  
     
     # creating pafy object of the video 
     video = pafy.new(url)  
@@ -139,6 +139,6 @@ if __name__ == '__main__':
     best = video.getbest() 
     # best.download()       
 
-    folderPath = 'C:/Users/Vishal Ramane/Documents/GitHub/MTProject/textExtraction/frames'
+    folderPath = 'C:/Users/vrama/Documents/GitHub/MTProject/nlpSys/frames'
 
     textRecog(best.url,folderPath)
