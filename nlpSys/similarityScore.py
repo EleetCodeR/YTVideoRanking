@@ -19,6 +19,7 @@ def calcSimilarityScore(query,corpus):
     cols = len(corpus)
     print(f"  [INFO] : {rows} x {cols} matrix")
     cosineSimMatrix = [[0]*(cols+1)]*(rows) 
+    
     for i,q in enumerate(query) :
 
         totalScore = 0
@@ -64,6 +65,6 @@ if __name__ == '__main__':
     
     corpus = ['Female Reproductive System','SAP5(a)','Explain how the','function of the reproductive','regulated by hormonal','organs','are','interactions','Functions','Reproduction','Production of eggs','Through ovulation','Discharge of mature egg','Production of female sex hormones','Structures','Ovaries','female','gonad; produces eggs','and sex hormones','Follicles','structure in','gral','aorirnni','ovary that makes the','egg and progesterone','developing','Oocyte','uterus','fallopian','egg','IuuE=','_1_7}161','female sex cell','Egg','vagina','Structures','Uterine tubes','conducts egg towards','uterus; AKA','female organ','Uterus','a=48','where the fetus','develops','4=tr','Vagina','female','copulatory organ and','birth canal','Estrogen','Secreted by ovaries','Main female sex hormone','Estrogen at puberty stimulates','the','growth','of the uterus and the vagina','Egg maturation','Sexual characteristics','Menstruation']
 
-    query = "sperm male eggs ovary penis"
+    query = "sperm male eggs ovary female"
 
 
