@@ -14,10 +14,11 @@ from halo import Halo
 
 
 
-def textRecog(vid_ref,folderpath):   
+def textRecog(vid_url,folderpath):   
     spinner = Halo(text='processing', spinner='dots')
-
-    if not vid_ref:
+    print("  [INFO] : Text Recognition System Initialized...")
+    print("  [INFO] : ============================= Text Recognition System  ================")
+    if not vid_url:
         spinner.start("[INFO] starting video stream...")
         # print("[INFO] starting video stream...")
         vs = VideoStream(src=0).start()
@@ -25,7 +26,7 @@ def textRecog(vid_ref,folderpath):
     # otherwise, grab a reference to the video file
     else:
         spinner.start("[INFO] : Loading video file...")
-        vs = cv2.VideoCapture(vid_ref)
+        vs = cv2.VideoCapture(vid_url)
     
     spinner.succeed()
     spinner.start("[INFO] : Loading Text Recognition Model ...")
@@ -47,7 +48,7 @@ def textRecog(vid_ref,folderpath):
         # VideoStream or VideoCapture object- returns (ret,rame)
         
         frame = vs.read()
-        frame = frame[1] if vid_ref else frame
+        frame = frame[1] if vid_url else frame
         #  VideoCapture object- returns (ret,frame)
         # ret -> True/False.
 
@@ -108,17 +109,21 @@ def textRecog(vid_ref,folderpath):
     spinner.stop()
     print("  [INFO] : Results ready! elasped time: {:.2f}".format(fps.elapsed()))
     print("  [INFO] approx. FPS: {:.2f}".format(fps.fps()))
-    print("  [INFO] : Results - \n")
-    print(result)# TODO:save to a file.
-
+   
+    
     # if we are using a webcam, release the pointer
-    if not vid_ref:
+    if not vid_url:
         vs.stop()
     # otherwise, release the file pointer
     else:
         vs.release()
     # close all windows
     cv2.destroyAllWindows()
+    
+
+    print("  [INFO] : Results - \n")
+    print(result)
+    return result
 
 
 

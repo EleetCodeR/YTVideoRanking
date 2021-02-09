@@ -1,18 +1,22 @@
 from googleapiclient.discovery import build
 from youTube import getVideoMetaData
 from textblob import TextBlob
+from halo import Halo
 import os
 
 def getPolarityScore(comments):
+
+    spinner = Halo(text='processing', spinner='dots')
     polList = []
     score = 0
     positives = 0
     negatives = 0
 
     if(comments):
+        spinner.start("[INFO] : Calculating polarity of video comments ...")
         for c in comments :
 
-            print(f" \n {c}")
+            # print(f" \n {c}")
         
             blob = TextBlob(c)
             res = blob.sentiment
@@ -33,11 +37,14 @@ def getPolarityScore(comments):
                 score += pol
      
             polList.append((pol,sub))
+        
+        spinner.succeed()
 
-    print(f' \n {polList}')
+    # print(f' \n {polList}')
 
     score = (score/positives) if positives > negatives else (score/negatives)
 
+    print(f"  [INFO] : Polarity-Score : {score} ")
     return score
 
 

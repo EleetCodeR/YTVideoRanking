@@ -17,7 +17,7 @@ def getVideolist(query):
     print(response) 
 
 def getVideoMetaData(vid):
-     print("  [INFO] : Fetching Video metadata from Youtube...")
+    print("  [INFO] : Fetching Video metadata from Youtube...")
     api_service_name = "youtube"
     api_version = "v3"
     api_key = os.environ.get('YOUTUBE_API')# get the API_KEY stored on pc.
@@ -57,5 +57,5 @@ def getVideoMetaData(vid):
 
 if __name__ == "__main__":
 
-    getVideoMetaData("SkcddD0LGlM")
+    print(getVideoMetaData("SkcddD0LGlM"))
 

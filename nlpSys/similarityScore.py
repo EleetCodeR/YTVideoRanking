@@ -14,7 +14,7 @@ def calcSimilarityScore(query,corpus):
     model = api.load("glove-twitter-100")
     spinner.succeed()
     
-    print(" [INFO] : Generating Cosine Similarity Matrix ...")
+    print("  [INFO] : Generating Cosine Similarity Matrix ...")
     rows = len(query)
     cols = len(corpus)
     print(f"  [INFO] : {rows} x {cols} matrix")
@@ -28,6 +28,7 @@ def calcSimilarityScore(query,corpus):
             try:
                 sim =  model.similarity(q,c)
                 if(sim > 0):
+                    # considering only non-zero values for meaningful averages.
                     col +=1
                     totalScore += sim   
                     cosineSimMatrix[i][j] = sim
@@ -43,10 +44,10 @@ def calcSimilarityScore(query,corpus):
                 print(f"  [ERROR] : {e}")
         
         # print(f"ROW-SCORE :{totalScore}")
-        cosineSimMatrix[i][cols] = totalScore/col
+        cosineSimMatrix[i][cols] = totalScore/(col if col else 1)
             
 
-    #print(cosineSimMatrix)
+    # print(cosineSimMatrix)
 
     score = 0
     for x in range(0,rows):
@@ -59,6 +60,8 @@ def calcSimilarityScore(query,corpus):
     print(f"  [INFO] : Elapsed Time :{elapsed_time}")
     print(f"  [INFO] : Similarity-Score : {score} ")
 
+    return score
+
     
 
 if __name__ == '__main__':
@@ -67,4 +70,4 @@ if __name__ == '__main__':
 
     query = "sperm male eggs ovary female"
 
-
+    calcSimilarityScore(query,corpus)
