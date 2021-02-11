@@ -20,13 +20,12 @@ def textPreprocess(corpus):
         text = list(tokenize(text,lowercase=True,deacc=True))
         _ = [sanitizedCorpus.append(txt) for txt in text]
     
-     sanitizedCorpus = set(sanitizedCorpus)
+    sanitizedCorpus = set(sanitizedCorpus)
 
     elapsed_time = time.time() - start_time
     elapsed_time = time.strftime("%H:%M:%S", time.gmtime(elapsed_time))
     spinner.succeed(f"[INFO] : Text Processing finished ! Elapsed Time :{elapsed_time}")    
-   
-    # print(sanitizedCorpus)
+    #print(sanitizedCorpus)
     return sanitizedCorpus
 
 

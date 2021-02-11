@@ -14,8 +14,11 @@ from halo import Halo
 
 
 
-def textRecog(vid_url,folderpath):   
+def textRecog(vid_url,folderpath,vidCount):   
+    start_time = time.time()
     spinner = Halo(text='processing', spinner='dots')
+    print("\n")
+    print("\n")
     print("  [INFO] : Text Recognition System Initialized...")
     print("  [INFO] : ============================= Text Recognition System  ================")
     if not vid_url:
@@ -57,7 +60,7 @@ def textRecog(vid_url,folderpath):
             break
         
         cv2.imshow("Frame:", frame)
-        key = cv2.waitKey(1) & 0xFF
+        key = cv2.waitKey(2) & 0xFF
         
         if key == ord("r"):
             spinner.text = "[INFO] : reader-invoked on the current frame ..."
@@ -83,7 +86,7 @@ def textRecog(vid_url,folderpath):
                    
             # show the output frame and save it
             cv2.imshow("Text Detection", frame)
-            cv2.imwrite(path.join(folderPath ,f'frame_{frameNo}.png'), frame)
+            cv2.imwrite(path.join(folderpath , f"v_{vidCount}_f{frameNo}.png"), frame)
 
             print("  [ALERT] : Press Key 'c' : to continue , 'q' : quit.")
             key = cv2.waitKey(0) & 0xFF
@@ -107,7 +110,9 @@ def textRecog(vid_url,folderpath):
    
     fps.stop()
     spinner.stop()
-    print("  [INFO] : Results ready! elasped time: {:.2f}".format(fps.elapsed()))
+    elapsed_time = time.time() - start_time
+    elapsed_time = time.strftime("%H:%M:%S", time.gmtime(elapsed_time))
+    print(f"  [INFO] : Exiting Text Recognition\n  [INFO] : Elapsed Time -{elapsed_time}")
     print("  [INFO] approx. FPS: {:.2f}".format(fps.fps()))
    
     
@@ -146,4 +151,4 @@ if __name__ == '__main__':
 
     folderPath = 'C:/Users/vrama/Documents/GitHub/MTProject/nlpSys/frames'
 
-    textRecog(best.url,folderPath)
+    textRecog(best.url,folderPath,1)
