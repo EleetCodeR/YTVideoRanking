@@ -7,13 +7,18 @@ from pprint import pprint
 def calcSimilarityScore(query,corpus):
     spinner = Halo(text='processing', spinner='dots')
     start_time = time.time()
+
     # download the model and return as object ready for use
     # model = api.load("glove-wiki-gigaword-100")
-    # model = api.load("glove-twitter-25")
+    # model = api.load("glove-twitter-100")
+    # model = api.load("glove-twitter-25")   
+
+    modelName = "glove-wiki-gigaword-100"
     spinner.start("[INFO] : Loading GloVe-Model ...")
-    model = api.load("glove-twitter-100")
+    model = api.load(modelName)
     spinner.succeed()
     
+    print(f"  [INFO] : {modelName} loaded !")
     print("  [INFO] : Generating Cosine Similarity Matrix ...")
     rows = len(query)
     cols = len(corpus)

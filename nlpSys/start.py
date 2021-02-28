@@ -37,13 +37,18 @@ def irfSys(vid,query,corpus):
     viewCount = stats['viewcount']
     likes = stats['likes']
     dislikes = stats['dislikes']
+    totalComments = stats['comments']
 
     index = (likes/viewCount)-(dislikes/viewCount)+similarity+polarity
 
 
     elapsed_time = time.time() - start_time
     elapsed_time = time.strftime("%H:%M:%S", time.gmtime(elapsed_time))
+   
     print(f"  [INFO] : Exiting IRF system ! \n  [INFO] : Elapsed Time -{elapsed_time}")
+    print("  [INFO] : ============== Video Info ==============") 
+    print(f"  [INFO] : views - {viewCount} , likes - {likes} , dislikes- {dislikes} , top level comments - {totalComments} ")
+    print(f"  [INFO] : Similarity score - {similarity} , Polarity score - {polarity} ")
     print(f"  [INFO] : Index :  {index} ")
     return index
 
@@ -73,8 +78,8 @@ def start():
     print("  [INFO] : ****************************** Start ******************************")
     start_time = time.time()
 
-    searchQuery = "Female Reproductive System slides"
-    videoList = ['HH_2yge9uYY', 'SkcddD0LGlM', 'toKp0SGyv5w']
+    searchQuery = "geography solar system"
+    videoList = ['EytrFc9qIOo', 'PxGJ0eDYYkM', 'libKVRa01L8','frUMSrnFTNY']
     videoCount = 0
     ranking = {}
 
@@ -105,3 +110,13 @@ def start():
 if __name__ == '__main__':
     start()
     
+    # Female Reproductive System slides
+    # HH_2yge9uYY
+    # SkcddD0LGlM
+    # toKp0SGyv5w
+
+    # geography solar system
+    # EytrFc9qIOo
+    # PxGJ0eDYYkM
+    # libKVRa01L8
+    # frUMSrnFTNY

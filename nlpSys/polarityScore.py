@@ -11,6 +11,7 @@ def getPolarityScore(comments):
     score = 0
     positives = 0
     negatives = 0
+    neutral = 0
 
     if(comments):
         spinner.start("[INFO] : Calculating polarity of video comments ...")
@@ -35,12 +36,18 @@ def getPolarityScore(comments):
                 pol -= 0.20
                 pol = pol if pol>-1 else -1
                 score += pol
-     
+            else:
+                neutral += 1
+
+
             polList.append((pol,sub))
         
         spinner.succeed()
 
     # print(f' \n {polList}')
+    print(f"  [INFO] : Positive comments : {positives} ")
+    print(f"  [INFO] : Negative comments : {negatives} ")
+    print(f"  [INFO] : Neutral comments : {neutral} ")
 
     score = (score/positives) if positives > negatives else (score/negatives)
 
