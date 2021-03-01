@@ -38,7 +38,8 @@ def irfSys(vid,query,corpus):
     likes = stats['likes']
     dislikes = stats['dislikes']
     totalComments = stats['comments']
-    years = stats['publishedAt']
+    age = stats['age']
+    years = age if age else 1
 
     index = (likes/viewCount)-(dislikes/viewCount)+similarity+polarity
 
@@ -48,7 +49,8 @@ def irfSys(vid,query,corpus):
    
     print(f"  [INFO] : Exiting IRF system ! \n  [INFO] : Elapsed Time -{elapsed_time}")
     print("  [INFO] : ============== Video Info ==============") 
-    print(f"  [INFO] : views - {viewCount} , likes - {likes} , dislikes- {dislikes} , top level comments - {totalComments} ")
+    print(f"  [INFO] : Published - {age} years ago ")
+    print(f"  [INFO] : views - {viewCount} , likes - {likes} , dislikes- {dislikes} , total comments - {totalComments} ")
     print(f"  [INFO] : likes-views ratio : {likes/viewCount} ,  dislikes-views ratio : {dislikes/viewCount}, views-years ratio : {viewCount/years} ")
     print(f"  [INFO] : Similarity score - {similarity} , Polarity score - {polarity} ")
     print(f"  [INFO] : Index :  {index} ")
@@ -80,7 +82,7 @@ def start():
     print("  [INFO] : ****************************** Start ******************************")
     start_time = time.time()
 
-    searchQuery = "geography solar system"
+    searchQuery = "geography, The solar system, sun, mars, mercury"
     videoList = ['EytrFc9qIOo', 'PxGJ0eDYYkM', 'libKVRa01L8','frUMSrnFTNY']
     videoCount = 0
     ranking = {}
