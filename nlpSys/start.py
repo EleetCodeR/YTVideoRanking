@@ -38,6 +38,7 @@ def irfSys(vid,query,corpus):
     likes = stats['likes']
     dislikes = stats['dislikes']
     totalComments = stats['comments']
+    years = stats['publishedAt']
 
     index = (likes/viewCount)-(dislikes/viewCount)+similarity+polarity
 
@@ -48,6 +49,7 @@ def irfSys(vid,query,corpus):
     print(f"  [INFO] : Exiting IRF system ! \n  [INFO] : Elapsed Time -{elapsed_time}")
     print("  [INFO] : ============== Video Info ==============") 
     print(f"  [INFO] : views - {viewCount} , likes - {likes} , dislikes- {dislikes} , top level comments - {totalComments} ")
+    print(f"  [INFO] : likes-views ratio : {likes/viewCount} ,  dislikes-views ratio : {dislikes/viewCount}, views-years ratio : {viewCount/years} ")
     print(f"  [INFO] : Similarity score - {similarity} , Polarity score - {polarity} ")
     print(f"  [INFO] : Index :  {index} ")
     return index

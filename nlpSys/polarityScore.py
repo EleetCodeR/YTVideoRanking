@@ -12,14 +12,16 @@ def getPolarityScore(comments):
     positives = 0
     negatives = 0
     neutral = 0
+    total = 0
 
     if(comments):
         spinner.start("[INFO] : Calculating polarity of video comments ...")
         for c in comments :
 
             # print(f" \n {c}")
-        
+
             blob = TextBlob(c)
+            total += 1
             res = blob.sentiment
             pol = res.polarity
             sub = res.subjectivity
@@ -45,6 +47,7 @@ def getPolarityScore(comments):
         spinner.succeed()
 
     # print(f' \n {polList}')
+    print(f"  [INFO] : Total comments : {total} ")
     print(f"  [INFO] : Positive comments : {positives} ")
     print(f"  [INFO] : Negative comments : {negatives} ")
     print(f"  [INFO] : Neutral comments : {neutral} ")
