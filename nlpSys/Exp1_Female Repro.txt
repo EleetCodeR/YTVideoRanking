@@ -102,68 +102,6 @@ v [INFO] : reader-invoked on the current frame ...
 v [INFO] : textual contents extracted...
   [ALERT] : Press Key 'c' : to continue , 'q' : quit.
   [INFO] : Key 'c' is pressed, continue video analysis...
-/ [INFO] : Resumed processing...[tls @ 0000028231b26d80] Unable to read from socket
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f0073: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f017d: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f028f: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f03a4: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f04bb: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f05cd: partial file
-- [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f06e6: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0734: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0782: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f07d2: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0822: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0872: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f08c2: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0912: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0962: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f09b2: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0a02: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7900: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7a00: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7a5a: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7aa8: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7bbf: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7d01: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7e37: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7f48: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f805f: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8174: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f828a: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f83a0: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8532: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8632: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8747: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f884c: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8973: partial file
-                                             stream 1, offset 0x8f8ab7: partial file
-stream 1, offset 0x8f8bc2: partial file2500] 
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] \stream 1, offset 0x8f8cef: partial file
- [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8df5: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8f01: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f900c: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9119: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9167: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f91b5: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9203: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9251: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f92a4: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f92f2: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9340: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f938e: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f93dc: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f942a: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9478: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f94c6: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9514: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9562: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9678: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9780: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9898: partial file
-[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] |stream 1, offset 0x8f9a03: partial file
- [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9b48: partial file
-/ [INFO] : Resumed processing...[tls @ 0000028231b26d80] Failed to send close message
   [INFO] : Exiting Text Recognition
   [INFO] : Elapsed Time -00:03:07
   [INFO] approx. FPS: 49.42
