@@ -29,8 +29,13 @@ def irfSys(vid,query,corpus):
     print("  [INFO] : ============================= Polarity score calculation =========================")
     metaData = getVideoMetaData(vid)
     stats = metaData[0]
+    comments = metaData[1]
+    polarity = 0
     # pass comments for polarity score
-    polarity = getPolarityScore(metaData[1])
+    if(comments):
+        polarity = getPolarityScore(comments)
+    else:
+        print("  [INFO] : ------> Comments Turned Off!")    
 
     # Index Calculation
     print("  [INFO] : ============================= Index calculation stage ============================")       
@@ -82,11 +87,11 @@ def start():
     print("  [INFO] : ****************************** Start ******************************")
     start_time = time.time()
 
-    searchQuery = "geography, The solar system, sun, mars, mercury"
-    videoList = ['EytrFc9qIOo', 'PxGJ0eDYYkM', 'libKVRa01L8','frUMSrnFTNY']
+    searchQuery = "Female Reproductive System slides"
+    videoList = ['HH_2yge9uYY', 'SkcddD0LGlM', 'toKp0SGyv5w']
     videoCount = 0
     ranking = {}
-
+\
     for vid in videoList :
         videoCount += 1
         index = getIndex(searchQuery,vid,videoCount)
@@ -119,8 +124,16 @@ if __name__ == '__main__':
     # SkcddD0LGlM
     # toKp0SGyv5w
 
-    # geography solar system
+    # geography, The solar system, sun, mars, mercury
     # EytrFc9qIOo
     # PxGJ0eDYYkM
     # libKVRa01L8
     # frUMSrnFTNY
+
+    # animal kingdom vertebrates and invertebrates
+    # mRidGna-V4E
+    # mQnRYL8zATs
+    # S7oXYEUyAug
+    # KjpGfqqvQ3E
+    # R50Xc1EUHwg
+    # L6anmd7DnYw

@@ -1,0 +1,285 @@
+(base) C:\Users\Vishal Ramane\Documents\GitHub\MTProject\nlpSys>python start.py
+
+
+  [INFO] : ****************************** Start ******************************
+
+
+
+
+  [INFO] : Text Recognition System Initialized...
+  [INFO] : ============================= Text Recognition System  ================
+v [INFO] : Loading video file...
+v [INFO] : Loading Text Recognition Model ...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+  [INFO] : Exiting Text Recognition
+  [INFO] : Elapsed Time -00:02:24
+  [INFO] approx. FPS: 83.28
+  [INFO] : Results - 
+
+['toppr', 'topi', 'Produce male gametes', 'Transfer them to the female body', 'toppr', 'toppr', 'Produces the female gamete', 'Produce male 
+gametes', 'Responsible for carrying the baby', 'Transfer them to the female body', "throughout it's development", 'toppr', 'Fallopian tube', 'Ovaries', 'toppr', 'toppr', 'Fallopian tube', 'Uterus', 'Ovaries', 'Cervix', 'Vagina', 'toppi', 'toppr', 'Placenta', 'toppr', 'toppr', 'Menstruation']
+
+
+  [INFO] : IRF-System Initialized...
+  [INFO] : ============================= Query-Text-preprocessing ===========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Corpus-Text-preprocessing ==========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Similarity score calculation =======================
+v [INFO] : Loading GloVe-Model ...
+  [INFO] : glove-wiki-gigaword-100 loaded !
+  [INFO] : Generating Cosine Similarity Matrix ...
+  [INFO] : 14 x 24 matrix
+  [INFO] : Elapsed Time :00:00:49
+  [INFO] : Similarity-Score : 0.16826412587293554 
+  [INFO] : ============================= Polarity score calculation =========================
+  [INFO] : Fetching Video metadata from Youtube...
+v [INFO] : Calculating polarity of video comments ...
+  [INFO] : Total comments : 49
+  [INFO] : Positive comments : 31
+  [INFO] : Negative comments : 0
+  [INFO] : Neutral comments : 18
+  [INFO] : Polarity-Score : 0.8702867383512544
+  [INFO] : ============================= Index calculation stage ============================
+  [INFO] : Exiting IRF system !
+  [INFO] : Elapsed Time -00:00:50
+  [INFO] : ============== Video Info ==============
+  [INFO] : Published - 1 years ago 
+  [INFO] : views - 42801 , likes - 883 , dislikes- 50 , total comments - 59
+  [INFO] : likes-views ratio : 0.02063035910375926 ,  dislikes-views ratio : 0.0011681970047428799, views-years ratio : 42801.0
+  [INFO] : Similarity score - 0.16826412587293554 , Polarity score - 0.8702867383512544
+  [INFO] : Index :  1.0580130263232064
+
+
+
+
+  [INFO] : Text Recognition System Initialized...
+  [INFO] : ============================= Text Recognition System  ================
+v [INFO] : Loading video file...
+v [INFO] : Loading Text Recognition Model ...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+/ [INFO] : Resumed processing...[tls @ 0000028231b26d80] Unable to read from socket
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f0073: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f017d: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f028f: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f03a4: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f04bb: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f05cd: partial file
+- [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f06e6: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0734: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0782: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f07d2: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0822: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0872: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f08c2: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0912: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0962: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f09b2: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f0a02: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7900: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7a00: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f7a5a: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7aa8: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7bbf: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7d01: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7e37: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f7f48: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f805f: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8174: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f828a: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f83a0: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8532: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8632: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8747: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f884c: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8973: partial file
+                                             stream 1, offset 0x8f8ab7: partial file
+stream 1, offset 0x8f8bc2: partial file2500] 
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] \stream 1, offset 0x8f8cef: partial file
+ [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8df5: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f8f01: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f900c: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9119: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9167: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f91b5: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9203: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9251: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f92a4: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f92f2: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9340: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f938e: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f93dc: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f942a: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9478: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f94c6: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 0, offset 0x8f9514: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9562: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9678: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9780: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9898: partial file
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] |stream 1, offset 0x8f9a03: partial file
+ [INFO] : Resumed processing...[mov,mp4,m4a,3gp,3g2,mj2 @ 00000281da902500] stream 1, offset 0x8f9b48: partial file
+/ [INFO] : Resumed processing...[tls @ 0000028231b26d80] Failed to send close message
+  [INFO] : Exiting Text Recognition
+  [INFO] : Elapsed Time -00:03:07
+  [INFO] approx. FPS: 49.42
+  [INFO] : Results - 
+
+['Female Reproductive System', 'SAP5(a)', 'Explain how the', 'function of the reproductive', 'regulated by hormonal', 'organs', 'are', 'interactions', 'Functions', 'Reproduction', 'Production of eggs', 'Through ovulation', 'Discharge of mature egg', 'Production of female sex hormones', 'Structures', 'Ovaries', 'female', 'gonad; produces eggs', 'and sex hormones', 'Follicles', 'structure in', 'orar', 'aofirnn', 'ovary that makes the', 'egg and progesterone', 'developing', 'Oocyte', 'uterus', 'fallopian', 'egg', 'aol3)=', '=', 'female sex cell', 'Egg', 'vagina', 'Structures', 'Uterine tubes', 'conducts egg towards', 'uterus; AKA', 'female organ', 'Uterus', 'a=48', 'where the fetus', 'develops', '4=tr', 'Vagina', 'female', 'copulatory organ and', 'birth canal', 'Estrogen', 'Secreted by ovaries', 'Main female sex hormone', 'Estrogen at puberty stimulates', 'the', 'growth', 'of the uterus and the vagina', 'Egg maturation', 'Sexual characteristics', 'Menstruation']       
+
+
+  [INFO] : IRF-System Initialized...
+  [INFO] : ============================= Query-Text-preprocessing ===========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Corpus-Text-preprocessing ==========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Similarity score calculation =======================
+v [INFO] : Loading GloVe-Model ...
+  [INFO] : glove-wiki-gigaword-100 loaded !
+  [INFO] : Generating Cosine Similarity Matrix ...
+  [INFO] : 14 x 61 matrix
+  [INFO] : Elapsed Time :00:00:47
+  [INFO] : Similarity-Score : 0.162409894920599
+  [INFO] : ============================= Polarity score calculation =========================
+  [INFO] : Fetching Video metadata from Youtube...
+v [INFO] : Calculating polarity of video comments ...
+  [INFO] : Total comments : 28
+  [INFO] : Positive comments : 14
+  [INFO] : Negative comments : 8 
+  [INFO] : Neutral comments : 6
+  [INFO] : Polarity-Score : 0.5152284322820038 
+  [INFO] : ============================= Index calculation stage ============================
+  [INFO] : Exiting IRF system !
+  [INFO] : Elapsed Time -00:00:49
+  [INFO] : ============== Video Info ==============
+  [INFO] : Published - 12 years ago
+  [INFO] : views - 307838 , likes - 300 , dislikes- 51 , total comments - 29
+  [INFO] : likes-views ratio : 0.000974538555993737 ,  dislikes-views ratio : 0.0001656715545189353, views-years ratio : 25653.166666666668 
+  [INFO] : Similarity score - 0.162409894920599 , Polarity score - 0.5152284322820038 
+  [INFO] : Index :  0.6784471942040776
+
+
+
+
+  [INFO] : Text Recognition System Initialized...
+  [INFO] : ============================= Text Recognition System  ================
+v [INFO] : Loading video file...
+v [INFO] : Loading Text Recognition Model ...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+v [INFO] : reader-invoked on the current frame ...
+v [INFO] : textual contents extracted...
+  [ALERT] : Press Key 'c' : to continue , 'q' : quit.
+  [INFO] : Key 'c' is pressed, continue video analysis...
+  [INFO] : Exiting Text Recognition
+  [INFO] : Elapsed Time -00:01:43
+  [INFO] approx. FPS: 86.59
+  [INFO] : Results - 
+
+['Female', 'APMD lecv', 'Reproductive', 'TUTOQJAS', 'Anatomy', 'ANATOMY', 'REPQODUCTIVE', 'FEmALE', 'FALLOPIAN TUEE', 'FIMBRIA', '~OVARy', 'FeLLLE', 'VAGINA', 'ANATOMY', 'REPQODUCTIVE', 'FEmALE', 'FuNDUS', 'Uie@ite', 'FALLOPIAN TURE', 'FinBRIA', 'tlenETnIUH', 'nOVARY', 'FeLLE', 'UTBIINE CAVITY', 'ceQVIX', 'VAGINA', 'ANATOMY', 'FEmALE', 'REPQODUCTIVE', 'UlGQINE', 'FuNDUS', 'FALLOPIAN TUEE', 'FIHBRIA', 'tlenETIIUH', 'nOVARy', 'FeLLLE', 'ENDoHETnIUM', 'UTBIINE CAVITY', 'CEQVIX', 'VAGINA', 'ANATOMY', 'QEPQODUCTIVE', 'FEMALE', 'FUNDUS', 'Ule@INE', 'FALLOPIAN 
+TUEE', 'ovILWI', 'ePeAD', 'LIGAlIEMT', 'CIGAHGMT', 'FinBRIA', 'llelETIIUH', 'nLOVARY', 'FeLLE', 'ENDoneTnIUM', 'UTEIINE CAVITY', 'CeQVIX', 'VAGINA']
+
+
+  [INFO] : IRF-System Initialized...
+  [INFO] : ============================= Query-Text-preprocessing ===========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Corpus-Text-preprocessing ==========================
+  [INFO] : Text-pre processing started...
+v [INFO] : Text Processing finished ! Elapsed Time :00:00:00
+  [INFO] : ============================= Similarity score calculation =======================
+v [INFO] : Loading GloVe-Model ...
+  [INFO] : glove-wiki-gigaword-100 loaded !
+  [INFO] : Generating Cosine Similarity Matrix ...
+  [INFO] : 14 x 39 matrix
+  [INFO] : Elapsed Time :00:00:49
+  [INFO] : Similarity-Score : 0.07410101390754184
+  [INFO] : ============================= Polarity score calculation =========================
+  [INFO] : Fetching Video metadata from Youtube...
+v [INFO] : Calculating polarity of video comments ...
+  [INFO] : Total comments : 63
+  [INFO] : Positive comments : 31
+  [INFO] : Negative comments : 8 
+  [INFO] : Neutral comments : 24
+  [INFO] : Polarity-Score : 0.7223387096774194
+  [INFO] : ============================= Index calculation stage ============================
+  [INFO] : Exiting IRF system !
+  [INFO] : Elapsed Time -00:00:50
+  [INFO] : ============== Video Info ==============
+  [INFO] : Published - 6 years ago
+  [INFO] : views - 400775 , likes - 2386 , dislikes- 160 , total comments - 75
+  [INFO] : likes-views ratio : 0.005953465161250078 ,  dislikes-views ratio : 0.00039922649865884846, views-years ratio : 66795.83333333333 
+  [INFO] : Similarity score - 0.07410101390754184 , Polarity score - 0.7223387096774194
+  [INFO] : Index :  0.8019939622475525
+
+
+  [INFO] : ============================= Old Ranking ===========================
+['HH_2yge9uYY', 'SkcddD0LGlM', 'toKp0SGyv5w']
+
+
+  [INFO] : ============================= New Ranking ===========================
+{'HH_2yge9uYY': 1.0580130263232064, 'toKp0SGyv5w': 0.8019939622475525, 'SkcddD0LGlM': 0.6784471942040776}
+
+
+  [INFO] : ****************************** END ******************************
+  [INFO] : Total Elapsed Time - 00:09:49

@@ -49,16 +49,25 @@ def getVideoMetaData(vid):
     # print(f"period : {period} \n")
 
     stats = response['statistics']
-    stats = { 'age':period,'viewcount':int(stats['viewCount']),'likes':int(stats['likeCount']),'dislikes':int(stats['dislikeCount']),'comments':int(stats['commentCount'])}
+
+    if 'commentCount' in stats:
+        stats = { 'age':period,'viewcount':int(stats['viewCount']),'likes':int(stats['likeCount']),'dislikes':int(stats['dislikeCount']),'comments':int(stats['commentCount'])}
+    else:
+        stats = { 'age':period,'viewcount':int(stats['viewCount']),'likes':int(stats['likeCount']),'dislikes':int(stats['dislikeCount']),'comments': 0}
+
 
     comments = []
 
-    request = youtube.commentThreads().list(
+    try:
+        request = youtube.commentThreads().list(
         part="snippet,replies",
         videoId=vid,
-        maxResults = 100 #  Data API can send max 100 comments
-    )
-    response = request.execute()
+        maxResults = 100) #  Data API can send max 100 comments    
+        response = request.execute()
+    except :
+        comments = None
+        return (stats,comments)
+        
     for item in response['items']:
         item = item['snippet']
         item = item['topLevelComment']
