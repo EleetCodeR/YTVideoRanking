@@ -19,6 +19,31 @@ def getVideolist(query):
     response = request.execute()
     print(response) 
 
+def getComments(vid):
+    api_service_name = "youtube"
+    api_version = "v3"
+    api_key = os.environ.get('YOUTUBE_API')# get the API_KEY stored on pc.
+    youtube = build(api_service_name,api_version,developerKey=api_key)
+    
+    comments = []
+    try:
+        request = youtube.commentThreads().list(
+        part="snippet",
+        videoId=vid,
+        maxResults = 100) #  Data API can send max 100 comments    
+        response = request.execute()
+    except :
+        comments = None
+        return comments
+        
+    for item in response['items']:
+        item = item['snippet']
+        item = item['topLevelComment']
+        item = item['snippet']
+        text = item['textOriginal']
+        comments.append(text)
+    return comments
+
 def getVideoMetaData(vid):
     print("  [INFO] : Fetching Video metadata from Youtube...")
     api_service_name = "youtube"
@@ -84,22 +109,33 @@ def getVideoMetaData(vid):
 
 if __name__ == "__main__":
 
+    vid ="L6anmd7DnYw"
     # Female Reproductive System slides
     # HH_2yge9uYY
     # SkcddD0LGlM
     # toKp0SGyv5w
-
+    
     # geography solar system
     # EytrFc9qIOo  Stats : {'age': 3, 'viewcount': 2112795, 'likes': 41378, 'dislikes': 2067, 'comments': 1372}  
-
     # PxGJ0eDYYkM  Stats : {'age': 1, 'viewcount': 42045, 'likes': 1852, 'dislikes': 75, 'comments': 57}
-
     # libKVRa01L8 Stats : {'age': 3, 'viewcount': 16549830, 'likes': 106886, 'dislikes': 6292, 'comments': 5044}
-
     # frUMSrnFTNY  Stats : {'age': 1, 'viewcount': 82484, 'likes': 2159, 'dislikes': 101, 'comments': 190}
 
-    response  = getVideoMetaData("frUMSrnFTNY")
-    
-    print(f" Stats : {response[0]}")
-    print(f" length : {len(response[1])}")
+    # animal kingdom vertebrates and invertebrates
+    # mRidGna-V4E
+    # mQnRYL8zATs
+    # S7oXYEUyAug
+    # KjpGfqqvQ3E
+    # R50Xc1EUHwg
+    # L6anmd7DnYw
 
+    # response  = getVideoMetaData("frUMSrnFTNY")
+    
+    response  = getComments(vid)
+ 
+    print(f" ========================== VID - {vid} ========================== \n")
+
+    for comment in response:
+        print(comment,'\n')
+
+    print(f" ========================== END ==========================")

@@ -91,7 +91,7 @@ def start():
     videoList = ['HH_2yge9uYY', 'SkcddD0LGlM', 'toKp0SGyv5w']
     videoCount = 0
     ranking = {}
-\
+
     for vid in videoList :
         videoCount += 1
         index = getIndex(searchQuery,vid,videoCount)
