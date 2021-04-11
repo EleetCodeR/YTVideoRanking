@@ -75,8 +75,7 @@ def getIndex(searchQuery,vid,vidCount):
     # best.download()          
    
     corpus = textRecog(best.url,folderPath,vidCount)  
-    # corpus = ['Female Reproductive System','SAP5(a)','Explain how the','function of the reproductive','regulated by hormonal','organs','are','interactions','Functions','Reproduction','Production of eggs','Through ovulation','Discharge of mature egg','Production of female sex hormones','Structures','Ovaries','female','gonad; produces eggs','and sex hormones','Follicles','structure in','gral','aorirnni','ovary that makes the','egg and progesterone','developing','Oocyte','uterus','fallopian','egg','IuuE=','_1_7}161','female sex cell','Egg','vagina','Structures','Uterine tubes','conducts egg towards','uterus; AKA','female organ','Uterus','a=48','where the fetus','develops','4=tr','Vagina','female','copulatory organ and','birth canal','Estrogen','Secreted by ovaries','Main female sex hormone','Estrogen at puberty stimulates','the','growth','of the uterus and the vagina','Egg maturation','Sexual characteristics','Menstruation']
-   
+
     index = irfSys(vid,searchQuery,corpus)
 
     return index
@@ -87,8 +86,10 @@ def start():
     print("  [INFO] : ****************************** Start ******************************")
     start_time = time.time()
 
-    searchQuery = "Female Reproductive System slides"
-    videoList = ['HH_2yge9uYY', 'SkcddD0LGlM', 'toKp0SGyv5w']
+    searchQuery = "animal kingdom vertebrates and invertebrates"
+
+    videoList = ['mRidGna-V4E', 'mQnRYL8zATs', 'S7oXYEUyAug','KjpGfqqvQ3E','R50Xc1EUHwg','L6anmd7DnYw']
+
     videoCount = 0
     ranking = {}
 
@@ -129,6 +130,7 @@ if __name__ == '__main__':
     # PxGJ0eDYYkM
     # libKVRa01L8
     # frUMSrnFTNY
+    # videoList = ['EytrFc9qIOo', 'PxGJ0eDYYkM', 'libKVRa01L8','frUMSrnFTNY']
 
     # animal kingdom vertebrates and invertebrates
     # mRidGna-V4E
@@ -136,4 +138,4 @@ if __name__ == '__main__':
     # S7oXYEUyAug
     # KjpGfqqvQ3E
     # R50Xc1EUHwg
-    # L6anmd7DnYw
+    # 'L6anmd7DnYw'
