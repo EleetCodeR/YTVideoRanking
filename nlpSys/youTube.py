@@ -7,7 +7,7 @@ from datetime import datetime
 def getVideolist(query):
     api_service_name = "youtube"
     api_version = "v3"
-    api_key = os.environ.get('YOUTUBE_API')# get the API_KEY stored on pc.
+    api_key = os.environ.get('YOUTUBE_API')
     youtube = build(api_service_name,api_version,developerKey=api_key)
     request = youtube.search().list(
             part="snippet",
