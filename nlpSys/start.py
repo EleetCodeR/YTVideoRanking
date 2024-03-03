@@ -63,7 +63,7 @@ def irfSys(vid,query,corpus):
 
 
 def getIndex(searchQuery,vid,vidCount):
-    folderPath = 'C:/Users/Vishal Ramane/Documents/GitHub/MTProject/nlpSys/frames'     
+    folderPath = '<path here>'     
     # Female Reproductive sys vids : SkcddD0LGlM , L-cXrt8RWek      
     # Access Math vids : AsDfluoYB4Q , 7D8-R-4Cdfg&t=237s    
     # url of the video 
